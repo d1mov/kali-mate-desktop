@@ -21,5 +21,5 @@ Now reboot your system and login as root. Then open a terminal and execute the p
 ```
 curl -sSL https://raw.githubusercontent.com/d1mov/kali-mate-desktop/main/kali-mate.sh | bash
 ```
-Thats it! Once the script finishes, the system will automatically reboot. After logging back in, the environment should look like the screenshow below:
+Thats it! Once the script finishes, the system will automatically reboot. After logging back in, the environment should look like the screenshot below:
 ![BottomText](screenshot1.png)
