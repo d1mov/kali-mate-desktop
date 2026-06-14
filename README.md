@@ -2,6 +2,8 @@
 This repository provides an automated provisioning script for building a TryHackMe-styled Kali Linux virtual machine. It is designed to quickly transform a fresh Kali installation into a preconfigured environment.
 The script installs and configures MATE desktop environment, applies a customized visual theme and sets up a structured panel and dock layout. It also includes UI enhancements such as a Plank dock, custom terminal and mate-panel appearance, and a preconfigured wallpaper.
 
+Tested on Kali Linux 2026.2.
+
 # What it does
 - Installs and configures MATE Desktop Environment
 - Applies Arc Dark theme and Papirus-Dark icons
