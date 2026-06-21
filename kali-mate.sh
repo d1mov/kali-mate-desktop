@@ -5,6 +5,9 @@ apt update > /dev/null 2>&1
 apt upgrade -y > /dev/null 2>&1
 apt full-upgrade -y > /dev/null 2>&1
 
+echo "[+] Setting GRUB boot menu timeout to 0s..."
+sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' /etc/default/grub && sudo update-grub > /dev/null 2>&1
+
 echo "[+] Installing Sublime Editor..."
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo tee /etc/apt/keyrings/sublimehq-pub.asc > /dev/null 2>&1
 echo -e 'Types: deb\nURIs: https://download.sublimetext.com/\nSuites: apt/stable/\nSigned-By: /etc/apt/keyrings/sublimehq-pub.asc' | sudo tee /etc/apt/sources.list.d/sublime-text.sources > /dev/null 2>&1
