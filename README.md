@@ -11,6 +11,7 @@ Tested on Kali Linux 2026.2.
 - Configures MATE panel layout with system widgets and shortcuts
 - Customizes MATE Terminal appearance
 - Applies a custom wallpaper (Kali-themed)
+- Removes the annoying GRUB bootloader delay
 
 # How to use
 Before executing the script you have to enable root login from GUI. We can do this by setting a root password:
