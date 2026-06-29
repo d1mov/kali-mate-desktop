@@ -102,11 +102,8 @@ background-color='#21212C2B4242'
 background-darkness=0.94999999999999996
 background-type='transparent'
 bold-color='#000000000000'
-default-size-columns=110
-default-size-rows=24
 foreground-color='#D4D4D8D8DFDF'
 palette='#21212C2B4242:#21212C2B4242:#A3A3EAEA2A2A:#ECECBBBB0A0A:#A3A3EAEA2A2A:#ECECBBBB0A0A:#7979BEBEFFFF:#E6E6E6E6E6E6:#21212C2B4242:#A3A3EAEA2A2A:#A3A3EAEA2A2A:#ECECBBBB0A0A:#7979BEBEFFFF:#ECECBBBB0A0A:#7979BEBEFFFF:#FFFFFFFFFFFF'
-use-custom-default-size=true
 use-theme-colors=false
 visible-name='Default'
 EOF
