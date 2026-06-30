@@ -17,6 +17,7 @@ apt-get install sublime-text > /dev/null 2>&1
 apt install -y seclists > /dev/null 2>&1
 apt install -y python3-pyftpdlib > /dev/null 2>&1
 apt install -y tigervnc-standalone-server > /dev/null 2>&1
+apt install -y websockify > /dev/null 2>&1
 
 gunzip /usr/share/wordlists/rockyou/rockyou.txt.gz
 
