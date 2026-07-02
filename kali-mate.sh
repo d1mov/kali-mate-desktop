@@ -19,7 +19,7 @@ apt install -y python3-pyftpdlib > /dev/null 2>&1
 apt install -y tigervnc-standalone-server > /dev/null 2>&1
 apt install -y websockify > /dev/null 2>&1
 
-gunzip /usr/share/wordlists/rockyou/rockyou.txt.gz
+gunzip /usr/share/wordlists/rockyou.txt.gz
 
 echo "[+] Installing Mate Desktop..."
 apt install -y kali-desktop-mate  > /dev/null 2>&1
