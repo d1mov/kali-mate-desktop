@@ -19,6 +19,11 @@ apt install -y python3-pyftpdlib > /dev/null 2>&1
 apt install -y tigervnc-standalone-server > /dev/null 2>&1
 apt install -y websockify > /dev/null 2>&1
 
+echo "[+] Installing SSH..."
+apt install -y openssh-server > /dev/null 2>&1
+systemctl enable ssh
+sed -i 's/^[#[:space:]]*PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
+
 gunzip /usr/share/wordlists/rockyou.txt.gz
 
 echo "[+] Installing Mate Desktop..."
@@ -72,6 +77,18 @@ Hidden=false
 NoDisplay=false
 X-MATE-Autostart-enabled=true
 Name=Plank
+X-MATE-Autostart-Delay=0
+EOF
+
+cat > /root/.config/autostart/killall.desktop << 'EOF'
+[Desktop Entry]
+Type=Application
+Exec=killall tigervncconfig
+Hidden=false
+Name[en_US]=disable tigervncconfig
+Name=disable tigervncconfig
+Comment[en_US]=
+Comment=
 X-MATE-Autostart-Delay=0
 EOF
 
@@ -275,6 +292,14 @@ LargeIcons=false
 EOF
 
 dconf load /net/launchpad/plank/docks/ < /root/Desktop/plank_config.ini
+
+echo "[+] Configuring VNC and websockify autostart..."
+
+(crontab -l 2>/dev/null; cat <<'EOF'
+@reboot SHELL=/bin/zsh vncserver :1 -SecurityTypes None
+@reboot python3 -m websockify 6080 localhost:5901 -D
+EOF
+) | crontab -
 
 echo "[+] Plank dock items created successfully!"
 
